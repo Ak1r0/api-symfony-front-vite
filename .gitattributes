@@ -1,17 +1,61 @@
-* text=auto eol=lf
+# Git to autodetect text files and normalise their line endings to LF when they are checked into your repository.
+* text=auto
 
-*.conf text eol=lf
-*.html text eol=lf
-*.ini text eol=lf
-*.js text eol=lf
-*.json text eol=lf
-*.md text eol=lf
-*.php text eol=lf
-*.sh text eol=lf
-*.yaml text eol=lf
-*.yml text eol=lf
-bin/console text eol=lf
-composer.lock text eol=lf merge=ours
+#
+# The above will handle all files NOT found below
+#
 
-*.ico binary
+# These files are text and should be normalized (Convert crlf => lf)
+*.php text
+*.css text
+*.js text
+*.jsx text
+*.json text
+*.htm text
+*.html text
+*.xml text
+*.txt text
+*.ini text
+*.inc text
+*.md text
+*.lock text
+*.ts text
+*.vue text
+*.svg text
+*.yaml text
+.htaccess text
+
+# These files are binary and should be left untouched
+# (binary is a macro for -text -diff)
 *.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mov binary
+*.mp4 binary
+*.mp3 binary
+*.flv binary
+*.fla binary
+*.swf binary
+*.gz binary
+*.zip binary
+*.7z binary
+*.ttf binary
+
+# Documents
+*.doc  diff=astextplain
+*.DOC  diff=astextplain
+*.docx diff=astextplain
+*.DOCX diff=astextplain
+*.dot  diff=astextplain
+*.DOT  diff=astextplain
+*.pdf  diff=astextplain
+*.PDF  diff=astextplain
+*.rtf  diff=astextplain
+*.RTF  diff=astextplain
+
+# These files are text and should be normalized (Convert crlf => lf)
+*.gitattributes text
+*.gitignore text
+LICENCE text
