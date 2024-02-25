@@ -22,7 +22,7 @@ services:
   
   front:
     build:
-      context: ./docker/vue
+      context: ./docker/app
       target: frontend_dev
     volumes:
       - ./app:/app

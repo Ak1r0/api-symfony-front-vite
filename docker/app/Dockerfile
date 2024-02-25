@@ -5,7 +5,7 @@ FROM node:lts-alpine AS frontend_base
 WORKDIR /app
 
 # Install dependencies using PNPM
-RUN npm install -g pnpm
+RUN npm install -g pnpm@8.15.4
 
 # Expose port 3000 for Vite development server
 EXPOSE 3000
